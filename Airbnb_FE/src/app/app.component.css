@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+
+}
+.header {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid;
+}
+
+#logo img {
+  width: 80px;
+  height: auto;
+}
+.glyphicon-search {
+  width: 60%;
+  height: 60%;
+  margin-top: 2%;
+  border-style: outset;
+  opacity: 0.8;
+  color: black;
+  font-family: "Arial";
+}
+#navbar {
+  margin-top: 2%;
+}
+.nav-link {
+  color: black;
+  font-weight: 600;
+  opacity: 0.6;
+}
+/*.navbar-header {*/
+/*  width: 100%;*/
+/*  height: auto;*/
+/*  font-size: 18px;*/
+/*  font-weight: 600;*/
+/*  font-family: "Yu Gothic";*/
+/*}*/
+
+/*.navbar-header img {*/
+/*   height: 60px;*/
+/*}*/
+/*.form-control {*/
+/*  position: relative;*/
+/*  padding-left: 10%;*/
+/*}*/
+/*.fa-search {*/
+/*  position: absolute;*/
+/*  top:25%;*/
+/*  left: 3%;*/
+/*}*/
+

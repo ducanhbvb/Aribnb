@@ -1,0 +1,89 @@
+<div class="container col-md-12 col-sm-12">
+  <div class="row">
+    <nav id="navbar-example2" class="navbar navbar-light bg-light col-md-12 col-sm-12">
+      <div id="logo">
+        <img src="https://i1.wp.com/ebenezersuites.com/wp-content/uploads/2016/06/airbnb-logo-266x300@2x.png"
+             alt=""
+             height="60" routerLink="/home">
+      </div>
+      <div class="col-md-6">
+        <input class="form-control" type="text" placeholder="&#61442;  Search" aria-label="Search">
+      </div>
+      <!--  <a style="font-weight: bold" class="navbar-brand" routerLink="/home">AirBnb</a>-->
+      <ul class="nav nav-pills">
+
+        <li class="nav-item" *ngIf="authority === 'user'">
+          <label class="nav-link" routerLink="/home/category-list">Category House</label>
+        </li>
+        <li class="nav-item" *ngIf="authority === 'user'">
+          <label class="nav-link" routerLink="/home/house-list-for-guest">View List House</label>
+        </li>
+        <li class="nav-item" *ngIf="authority === 'user'">
+<<<<<<< HEAD
+          <label class="nav-link" routerLink="/booking">Booking</label>
+=======
+          <label class="nav-link" routerLink="/home/list-order-of-user">List Order</label>
+>>>>>>> 87974cb5127cbcb8df3743d5ca842d739f5e0d33
+        </li>
+        <li class="nav-item" *ngIf="authority === 'user'">
+          <label class="nav-link" routerLink="/register-host">Home Stay</label>
+        </li>
+        <li class="nav-item" *ngIf="authority === 'user'">
+          <label class="nav-link" routerLink="/register-host">Resort</label>
+        </li>
+        <li class="nav-item" *ngIf="authority === 'user'">
+          <label class="nav-link" (click)="logout()">Logout</label>
+        </li>
+
+        <li class="nav-item" *ngIf="authority === 'host'">
+          <label class="nav-link" routerLink="/home/category-list">Category House</label>
+        </li>
+
+        <li class="nav-item" *ngIf="authority === 'host'">
+          <label class="nav-link">Manage House</label>
+        </li>
+
+        <li class="nav-item" *ngIf="!authority">
+          <label class="nav-link" routerLink="/register-host">Register for Host</label>
+        </li>
+        <li class="nav-item" *ngIf="authority === 'host'">
+          <label class="nav-link" routerLink="/home/add-house">Add House</label>
+        </li>
+        <li class="nav-item" *ngIf="!authority">
+          <label class="nav-link" routerLink="/register">Register for User</label>
+        </li>
+        <li class="nav-item" *ngIf="authority === 'host'">
+          <label class="nav-link" routerLink="/home/house-of-host">Host</label>
+        </li>
+        <li class="nav-item" *ngIf="authority === 'host'">
+          <label class="nav-link" routerLink="/register">Messages</label>
+        </li>
+        <li class="nav-item" *ngIf="authority === 'host'">
+          <label class="nav-link" (click)="logout()">Logout</label>
+        </li>
+        <li class="nav-item dropdown">
+          <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false" *ngIf="authority ==='user'">User {{info.username}}</button>
+          <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false" *ngIf="authority === 'host'">Host {{info.username}}</button>
+          <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false" *ngIf="!authority">Account
+          </button>
+          <div class="dropdown-menu" id="dropdownMenu">
+            <a class="dropdown-item" routerLink="/login">Login</a>
+            <a class="dropdown-item" routerLink="/information">Profile</a>
+            <a class="dropdown-item" routerLink="/login">Account</a>
+            <a class="dropdown-item" routerLink="/login">Invite Friends</a>
+<!--            <a class="dropdown-item" (click)="logout()">Logout</a>-->
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>
